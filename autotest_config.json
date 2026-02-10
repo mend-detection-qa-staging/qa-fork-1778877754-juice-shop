@@ -1,0 +1,113 @@
+{
+  "description": "Autotest configuration file for reachability detection validation",
+  "version": 1.5,
+  "base_config": {
+    "validate_reachability": true,
+    "reachability": {
+      "check_reachability_status": true,
+      "_comment_check_reachability_status": "Verify that reachability analysis was performed",
+      "expected_reachable_libraries": {
+        "contains": [
+          {
+            "library_name": "jsonwebtoken-0.4.0.tgz",
+            "vulnerabilities": ["CVE-2015-9235", "CVE-2022-23540", "CVE-2022-23539", "CVE-2022-23541"]
+          },
+          {
+            "library_name": "jsonwebtoken-0.1.0.tgz",
+            "vulnerabilities": ["CVE-2015-9235", "CVE-2022-23540", "CVE-2022-23539", "CVE-2022-23541"]
+          },
+          {
+            "library_name": "lodash-2.4.2.tgz",
+            "vulnerabilities": ["CVE-2019-10744", "CVE-2020-8203", "CVE-2021-23337", "CVE-2019-1010266", "CVE-2018-3721", "CVE-2020-28500"]
+          },
+          {
+            "library_name": "form-data-2.3.3.tgz",
+            "vulnerabilities": ["CVE-2025-7783"]
+          },
+          {
+            "library_name": "express-jwt-0.1.3.tgz",
+            "vulnerabilities": ["CVE-2020-15084"]
+          },
+          {
+            "library_name": "multer-1.4.5-lts.2.tgz",
+            "vulnerabilities": ["CVE-2025-7338", "CVE-2025-48997", "CVE-2025-47944", "CVE-2025-47935"]
+          },
+          {
+            "library_name": "messageformat-2.3.0.tgz",
+            "vulnerabilities": ["CVE-2025-57349"]
+          },
+          {
+            "library_name": "qs-6.5.3.tgz",
+            "vulnerabilities": ["CVE-2025-15284"]
+          },
+          {
+            "library_name": "moment-2.0.0.tgz",
+            "vulnerabilities": ["CVE-2022-24785", "WS-2016-0075"]
+          },
+          {
+            "library_name": "base64url-0.0.6.tgz",
+            "vulnerabilities": ["WS-2018-0096"]
+          },
+          {
+            "library_name": "engine.io-4.1.2.tgz",
+            "vulnerabilities": ["CVE-2022-41940"]
+          },
+          {
+            "library_name": "notevil-1.3.3.tgz",
+            "vulnerabilities": ["CVE-2021-23771"]
+          },
+          {
+            "library_name": "marsdb-0.6.11.tgz",
+            "vulnerabilities": ["WS-2019-0309"]
+          },
+          {
+            "library_name": "request-2.88.2.tgz",
+            "vulnerabilities": ["CVE-2023-28155"]
+          },
+          {
+            "library_name": "sanitize-html-1.4.2.tgz",
+            "vulnerabilities": ["CVE-2017-16016", "CVE-2016-1000237", "CVE-2022-25887", "CVE-2021-26540", "CVE-2021-26539"]
+          },
+          {
+            "library_name": "cookie-0.4.2.tgz",
+            "vulnerabilities": ["CVE-2024-47764"]
+          },
+          {
+            "library_name": "micromatch-3.1.10.tgz",
+            "vulnerabilities": ["CVE-2024-4067"]
+          },
+          {
+            "library_name": "got-8.3.2.tgz",
+            "vulnerabilities": ["CVE-2022-33987"]
+          },
+          {
+            "library_name": "jws-0.2.6.tgz",
+            "vulnerabilities": ["CVE-2016-1000223"]
+          }
+        ]
+      },
+      "_comment_expected_reachable_libraries": "Expected REACHABLE libraries",
+      "expected_unreachable_libraries": {
+        "contains": [
+          {
+            "library_name": "tar-4.4.19.tgz",
+            "vulnerabilities": ["CVE-2026-23950", "CVE-2026-24842"]
+          },
+          {
+            "library_name": "tar-6.2.1.tgz",
+            "vulnerabilities": ["CVE-2026-23950", "CVE-2026-24842"]
+          },
+          {
+            "library_name": "brace-expansion-2.0.2.tgz",
+            "vulnerabilities": ["CVE-2025-5889"]
+          }
+        ]
+      },
+      "_comment_expected_unreachable_libraries": ",,,",
+      "expected_total_reachable_count": { "gte": 39 },
+      "_comment_expected_total_reachable_count": "Minimum number of reachable CVEs expected (39 total reachable)",
+      "expected_total_unreachable_count": { "gte": 7 },
+      "_comment_expected_total_unreachable_count": "Expected number of unreachable CVEs (7 total unreachable)"
+    }
+  }
+}
